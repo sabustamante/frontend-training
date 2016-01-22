@@ -47,7 +47,7 @@
             return (palabra === palabra.split('').reverse().join(''));
         }
 
-        function contieneLetra(caracter) {
+        function contieneCaracter(caracter) {
             return function(palabra) {
                 return (palabra.indexOf(caracter) !== -1);
             }
@@ -60,7 +60,7 @@
         }
 
         function contarPalabrasCapicuaQueContienen(palabras, caracter) {
-            return palabras.filter(aplicarFiltros(esCapicua, contieneLetra(caracter))).length;
+            return palabras.filter(aplicarFiltros(esCapicua, contieneCaracter(caracter))).length;
         }
 
         assertEqual(contarPalabrasCapicuaQueContienen(['otto', 'arenera', 'reconocer', 'somos', 'foo'], 'a'), 1);
