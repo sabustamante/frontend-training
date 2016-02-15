@@ -11,7 +11,7 @@ describe("WalkingCreature", function () {
         assert(typeof WalkingCreature === "function");
     });
 
-    it.skip("must construct objects with prototypes: WalkingCreature.prototype", function () {
+    it("must construct objects with prototypes: WalkingCreature.prototype", function () {
 
         var legs = 2;
 

@@ -5,6 +5,7 @@
 // - breath            : It increments the amount of remaining oxygen
 // - consumeOxygen     : It decrements the amount of remaining oxygen
 // - hasDied           : It returns true if the amount of oxygen is zero and false otherwise
+
 function LivingCreature(oxygen) {
     if (typeof oxygen != 'number') {
         throw 'Error: the oxygen provided is not a number.';
@@ -20,23 +21,24 @@ LivingCreature.prototype.getRemainingOxygen = function () {
         throw 'Error: has died.';
     }
     return this.oxygen;
-}
+};
 
 LivingCreature.prototype.breath = function () {
     if (this.hasDied()) {
         throw 'Error: has died.';
     }
     this.oxygen++;
-}
+};
 
 LivingCreature.prototype.consumeOxygen = function () {
     if (this.hasDied()) {
         throw 'Error: has died.';
     }
     this.oxygen--;
-}
+};
 
 LivingCreature.prototype.hasDied = function () {
     return this.oxygen ? false : true;
-}
+};
+
 module.exports = LivingCreature;

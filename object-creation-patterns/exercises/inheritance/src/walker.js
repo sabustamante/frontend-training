@@ -4,6 +4,7 @@
 // - getLegs : It returns the amount of legs (the ones received in the constructor)
 // - getSteps: It returns the amount of steps done
 // - walk    : It increments the amount of steps done
+
 function Walker(legs) {
     if (typeof legs != 'number') {
         throw 'Error: the amount of legs provided is not a number.';
@@ -20,14 +21,14 @@ function Walker(legs) {
 
 Walker.prototype.getLegs = function () {
     return this.legs;
-}
+};
 
 Walker.prototype.getSteps = function () {
     return this.steps;
-}
+};
 
 Walker.prototype.walk = function () {
     this.steps++;
-}
+};
 
 module.exports = Walker;
