@@ -4,12 +4,12 @@ var LivingCreature = require("../src/living-creature");
 
 describe("LivingCreature", function () {
 
-    it.skip("must be a function", function () {
+    it("must be a function", function () {
 
         assert(typeof LivingCreature === "function");
     });
 
-    it.skip("must construct objects with prototypes: LivingCreature.prototype", function () {
+    it("must construct objects with prototypes: LivingCreature.prototype", function () {
 
         var initialOxygen = 0;
 
@@ -21,7 +21,7 @@ describe("LivingCreature", function () {
         assert(actual === expected);
     });
 
-    it.skip("must not throw any error if the oxygen provided is 0", function () {
+    it("must not throw any error if the oxygen provided is 0", function () {
 
         assert.doesNotThrow(function () {
 
@@ -31,7 +31,7 @@ describe("LivingCreature", function () {
         });
     });
 
-    it.skip("must not throw any error if the oxygen provided is greater than 0", function () {
+    it("must not throw any error if the oxygen provided is greater than 0", function () {
 
         assert.doesNotThrow(function () {
 
@@ -41,7 +41,7 @@ describe("LivingCreature", function () {
         });
     });
 
-    it.skip("must throw an error if the oxygen provided is not a number", function () {
+    it("must throw an error if the oxygen provided is not a number", function () {
 
         assert.throws(function () {
 
@@ -51,7 +51,7 @@ describe("LivingCreature", function () {
         });
     });
 
-    it.skip("must throw an error if the oxygen provided is less than zero", function () {
+    it("must throw an error if the oxygen provided is less than zero", function () {
 
 
         assert.throws(function () {
