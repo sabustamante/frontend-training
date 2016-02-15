@@ -14,10 +14,20 @@ function Walker(legs) {
     if ((legs % 2) != 0) {
         throw 'Error: the amount of legs provided is an odd number.';
     }
+    this.legs = legs;
+    this.steps = 0;
 }
 
-Walker.prototype = function () {
+Walker.prototype.getLegs = function () {
+    return this.legs;
+}
 
+Walker.prototype.getSteps = function () {
+    return this.steps;
+}
+
+Walker.prototype.walk = function () {
+    this.steps++;
 }
 
 module.exports = Walker;

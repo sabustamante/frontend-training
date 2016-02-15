@@ -12,17 +12,22 @@ function LivingCreature(oxygen) {
     if (oxygen < 0) {
         throw 'Error: the oxygen provided is less than zero.';
     }
+    this.oxygen = oxygen;
 }
 
 LivingCreature.prototype.getRemainingOxygen = function () {
+    return this.oxygen;
 }
 
 LivingCreature.prototype.breath = function () {
+    this.oxygen++;
 }
 
 LivingCreature.prototype.consumeOxygen = function () {
+    this.oxygen--;
 }
 
 LivingCreature.prototype.hasDied = function () {
+    return this.oxygen ? true : false;
 }
 module.exports = LivingCreature;
