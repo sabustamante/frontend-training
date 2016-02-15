@@ -16,18 +16,27 @@ function LivingCreature(oxygen) {
 }
 
 LivingCreature.prototype.getRemainingOxygen = function () {
+    if (this.hasDied()) {
+        throw 'Error: has died.';
+    }
     return this.oxygen;
 }
 
 LivingCreature.prototype.breath = function () {
+    if (this.hasDied()) {
+        throw 'Error: has died.';
+    }
     this.oxygen++;
 }
 
 LivingCreature.prototype.consumeOxygen = function () {
+    if (this.hasDied()) {
+        throw 'Error: has died.';
+    }
     this.oxygen--;
 }
 
 LivingCreature.prototype.hasDied = function () {
-    return this.oxygen ? true : false;
+    return this.oxygen ? false : true;
 }
 module.exports = LivingCreature;

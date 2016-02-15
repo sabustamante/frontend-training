@@ -81,7 +81,7 @@ describe("LivingCreature", function () {
 
         describe(".breath()", function () {
 
-            it.skip("must throw an error if it has died", function () {
+            it("must throw an error if it has died", function () {
 
                 var initialOxygen = 0;
 
@@ -93,7 +93,7 @@ describe("LivingCreature", function () {
                 });
             });
 
-            it.skip("must increment the amount of oxygen by 1 if it has not died", function () {
+            it("must increment the amount of oxygen by 1 if it has not died", function () {
 
                 var initialOxygen = 10;
 
@@ -110,7 +110,7 @@ describe("LivingCreature", function () {
 
         describe(".consumeOxygen()", function () {
 
-            it.skip("must throw an error if it has died", function () {
+            it("must throw an error if it has died", function () {
 
                 var initialOxygen = 0;
 
@@ -122,7 +122,7 @@ describe("LivingCreature", function () {
                 });
             });
 
-            it.skip("must decrement the amount of oxygen by 1 if it has not died", function () {
+            it("must decrement the amount of oxygen by 1 if it has not died", function () {
 
                 var initialOxygen = 10;
 
@@ -139,7 +139,7 @@ describe("LivingCreature", function () {
 
         describe(".hasDied(): boolean", function () {
 
-            it.skip("must return true if has been initialized with no oxygen (0)", function () {
+            it("must return true if has been initialized with no oxygen (0)", function () {
 
                 var initialOxygen = 0;
 
@@ -151,7 +151,7 @@ describe("LivingCreature", function () {
                 assert(actual === expected);
             });
 
-            it.skip("must return false if has been initialized with oxygen (> 0)", function () {
+            it("must return false if has been initialized with oxygen (> 0)", function () {
 
                 var initialOxygen = 10;
 
@@ -163,7 +163,7 @@ describe("LivingCreature", function () {
                 assert(actual === expected);
             });
 
-            it.skip("must return true if all the oxygen was consumed", function () {
+            it("must return true if all the oxygen was consumed", function () {
 
                 var initialOxygen = 1;
 
@@ -177,7 +177,7 @@ describe("LivingCreature", function () {
                 assert(actual === expected);
             });
 
-            it.skip("must return false if not all the oxygen was consumed", function () {
+            it("must return false if not all the oxygen was consumed", function () {
 
                 var initialOxygen = 2;
 

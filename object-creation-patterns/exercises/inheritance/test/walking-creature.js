@@ -6,7 +6,7 @@ var WalkingCreature = require("../src/walking-creature");
 
 describe("WalkingCreature", function () {
 
-    it.skip("must be a function", function () {
+    it("must be a function", function () {
 
         assert(typeof WalkingCreature === "function");
     });
