@@ -44,7 +44,7 @@ var ast = esprima.parse(myModuleCode);
 
 describe("myModule", function () {
 
-    it.skip('should use default parameters', function() {
+    it('should use default parameters', function() {
         var filter = function(node) {
             return node.defaults && node.defaults.length !== 0;
         };
@@ -56,40 +56,40 @@ describe("myModule", function () {
     });
 
     describe('sum', function() {
-        it.skip('should sum correctly', function() {
+        it('should sum correctly', function() {
             assert(myModule.sum(0,1,2) === 3);
             assert(myModule.sum() === 0);
         });
 
-        it.skip('should use rest', function() {
+        it('should use rest', function() {
             assert(traverseAndFindNodeType(ast, 'RestElement'));
         });
     });
 
     describe('sumArray', function() {
-        it.skip('should sum arrays correctly', function() {
+        it('should sum arrays correctly', function() {
             assert(myModule.sumArray([0,1,2]) === 3);
             assert(myModule.sumArray([]) === 0);
             assert(myModule.sumArray() === 0);
         });
 
-        it.skip('should use spread', function() {
+        it('should use spread', function() {
             assert(traverseAndFindNodeType(ast, 'SpreadElement'));
         });
     });
 
     describe('sumArrayOfArrays', function() {
-        it.skip('should sum arrays of arrays correctly', function() {
+        it('should sum arrays of arrays correctly', function() {
             assert(myModule.sumArrayOfArrays([[0],[1],[2]]) === 3);
             assert(myModule.sumArrayOfArrays([]) === 0);
             assert(myModule.sumArrayOfArrays() === 0);
         });
 
-        it.skip('should use arrow functions', function() {
+        it('should use arrow functions', function() {
             assert(traverseAndFindNodeType(ast, 'ArrowFunctionExpression'));
         });
 
-        it.skip('shouldn\'t be using "this" as the right side of a variable declaration', function() {
+        it('shouldn\'t be using "this" as the right side of a variable declaration', function() {
             assert(!traverseAndFindNodeType(ast, 'VariableDeclarator', function(node) {
                 return node.init.type === 'ThisExpression';
             }));

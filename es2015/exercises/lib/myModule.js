@@ -2,18 +2,26 @@
 var myModule = {
 
   // it should receive infinite number of params and return the sum
-  sum: function() {
-    // hint: use rest params 
+  sum: function(sum = 0, ...values) {
+    values.forEach((value) => {
+        sum += value;
+    });
+    return sum;
   },
 
   // it should receive an array of integers and return the sum of all the values
-  sumArray: function() {
-    
+  sumArray: function(values = []) {
+      return this.sum(...values);
   },
 
   // it should receive an array of array of integers and return the sum of all the values
-  sumArrayOfArrays: function() {
-    
+  sumArrayOfArrays: function(values = []) {
+      var sum = 0;
+
+      values.forEach((value) => {
+          sum += this.sumArray(value);
+      });
+      return sum;
   },
 
   // the method pluck is a variant of the "map" array method
