@@ -28,12 +28,16 @@ var myModule = {
   // but it assumes the array contains only objects and receives a second
   // parameter to extract
   // pluck([{ a:1, b:2}, {a: 'hi', b:'hello'}, {a: 3, b:4}], 'a') =====> [1,'hi',3]
-  pluck: function() {
+  pluck: function(objects, key) {
     // hint1: use computed property names (enhanced object literals)
     // to destructure dynamic keys
     // hint2: if you want to destructure parameters of an arrow
     // function, you will need to use parenthesis. example:
     // var fn = ({someKey: variableName}) => variableName;
+
+    // return objects.map(({key: value}) => {
+    //     value
+    // });
   }
 };
 
