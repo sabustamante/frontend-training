@@ -9,7 +9,7 @@ class View {
     }
 
     render() {
-        let data = this._model.data;
+        let data = this._model.data();
 
         return this._template(data);
     }

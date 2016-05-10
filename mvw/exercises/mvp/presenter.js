@@ -9,7 +9,7 @@ class Presenter {
     }
 
     model(model) {
-        this._view.model = model;
+        this._view.model(model);
     }
 }
 
